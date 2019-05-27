@@ -15,3 +15,4 @@ Description:
 	1. Modified kinematicCloudProperties and kinematicCloudPositions
 	2. Adding mean density "rhom" as arguments for muc calculation
 	3. Revised blockMeshDict, change "patches" to "boundary", and add symmetry frontAndBack (which enables 3-D colliding evolving in "kinematicCloud.evolve()"  )
+	4. Change solver name to "axiReactingEbullatingFoam"

@@ -39,6 +39,12 @@ solvers
         nAlphaSubCycles 2;
     }
 
+    alpha.water
+    {
+        nAlphaCorr      1;
+        nAlphaSubCycles 2;
+    }
+
     p_rgh
     {
         solver          GAMG;
