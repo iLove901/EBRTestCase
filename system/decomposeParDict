@@ -10,16 +10,19 @@ FoamFile
     version     2.0;
     format      ascii;
     class       dictionary;
-    location    "constant";
-    object      transportProperties;
+    location    "system";
+    object      decomposeParDict;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-continuousPhaseName air;
+numberOfSubdomains 8;
 
-rho.air         1.2;
+method          simple;
 
-transportModel  Newtonian;
-nu              1e-05;
+simpleCoeffs
+{
+    n               (1 8 1);
+    delta           0.001;
+}
 
 // ************************************************************************* //
