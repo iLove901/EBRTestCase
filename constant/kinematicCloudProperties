@@ -51,7 +51,7 @@ constantProperties
     rhoMin          1e-15;
     minParcelMass   1e-15;
 
-    rho0            2526;
+    rho0            1526;
     youngsModulus   1e8;
     poissonsRatio   0.35;
 
@@ -87,7 +87,8 @@ subModels
                 type        fixedValue;
                 fixedValueDistribution
                 {
-                    value   0.0025;
+			// Particle diameter
+                    value   0.001;
                 }
             }
         }
