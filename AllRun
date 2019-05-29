@@ -19,7 +19,19 @@ decomposePar
 # Mpi run
 mpirun -np $(getNumberOfProcessors) $(getApplication) -parallel
 
-# Reconstruct
+# Read shell
+# Enter y to reconstruct; otherwise exit
+echo
+echo
+echo ">>> Reconstruct partitions or not? y -> YES    n -> NO"
+read ReConstructOrNot
+
+if [ $ReConstructOrNot = "y" ]
+then 
 reconstructPar
+fi
+
+# Reconstruct
+
 
 #------------------------------------------------------------------------------

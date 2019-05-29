@@ -8,9 +8,10 @@
 
 /*----------------------------------------------------*/
 // This file is used for description
-Date: 190528
+Date: 190529
 Description:
 	1. Add many particles, but particles not moving
+	2. Add AllRun and AllClean for simplicity
 
 
 Date: 190527
