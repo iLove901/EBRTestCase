@@ -51,7 +51,7 @@ constantProperties
     rhoMin          1e-15;
     minParcelMass   1e-15;
 
-    rho0            1526;
+    rho0            5526;
     youngsModulus   1e8;
     poissonsRatio   0.35;
 
@@ -81,7 +81,7 @@ subModels
             nParticle       1;
             SOI             0;
             positionsFile   "kinematicCloudPositions";
-            U0              (0 0 0);
+            U0              (0 0.2 0);
             sizeDistribution
             {
                 type        fixedValue;

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 cd ${0%/*} || exit 1    # Run from this directory
 
 # Enable bash script
@@ -23,15 +23,13 @@ mpirun -np $(getNumberOfProcessors) $(getApplication) -parallel
 # Enter y to reconstruct; otherwise exit
 echo
 echo
+
+ReConstructOrNot="y"
 echo ">>> Reconstruct partitions or not? y -> YES    n -> NO"
-read ReConstructOrNot
+read -t 1 ReConstructOrNot
 
-if [ $ReConstructOrNot = "y" ]
-then 
-reconstructPar
+if [ [$ReConstructOrNot="y"] ]; then 
+	reconstructPar
 fi
-
-# Reconstruct
-
 
 #------------------------------------------------------------------------------
