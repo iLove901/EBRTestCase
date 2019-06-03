@@ -29,7 +29,7 @@ $(getApplication)
 # >>>read -t 60 ReConstructOrNot
 
 # >>>if [ [$ReConstructOrNot="y"] ]; then 
-	reconstructPar
+# >>>	reconstructPar
 # >>>fi
 
 #------------------------------------------------------------------------------
