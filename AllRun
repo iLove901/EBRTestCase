@@ -11,25 +11,25 @@ shopt -s extglob
 blockMesh
 
 # Decompose 8 domain
-decomposePar
+# >>>decomposePar
 
 # Run single core
-# runApplication $(getApplication)
+$(getApplication)
 
 # Mpi run
-mpirun -np $(getNumberOfProcessors) $(getApplication) -parallel
+# >>>mpirun -np $(getNumberOfProcessors) $(getApplication) -parallel
 
 # Read shell
 # Enter y to reconstruct; otherwise exit
-echo
-echo
+# >>>echo
+# >>>echo
 
-ReConstructOrNot="y"
-echo ">>> Reconstruct partitions or not? y -> YES    n -> NO"
-read -t 1 ReConstructOrNot
+# >>>ReConstructOrNot="y"
+# >>>echo ">>> Reconstruct partitions or not? y -> YES    n -> NO"
+# >>>read -t 60 ReConstructOrNot
 
-if [ [$ReConstructOrNot="y"] ]; then 
+# >>>if [ [$ReConstructOrNot="y"] ]; then 
 	reconstructPar
-fi
+# >>>fi
 
 #------------------------------------------------------------------------------
