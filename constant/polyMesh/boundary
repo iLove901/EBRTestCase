@@ -40,8 +40,8 @@ FoamFile
     }
     frontAndBack
     {
-        type            symmetry;
-        inGroups        List<word> 1(symmetry);
+        type            empty;
+        inGroups        List<word> 1(empty);
         nFaces          3750;
         startFace       3850;
     }

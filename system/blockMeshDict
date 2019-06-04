@@ -90,7 +90,7 @@ boundary
 
     frontAndBack
     {
-        type symmetry;
+        type empty; 		// symmetry;
         faces
         (
             (1 2 3 0)

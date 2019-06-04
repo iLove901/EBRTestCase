@@ -24,7 +24,7 @@ boundaryField
     inlet
     {
         type            fixedValue;
-        value           uniform 0.5;
+        value           uniform 0.9;
     }
     outlet
     {
@@ -40,7 +40,7 @@ boundaryField
 
     frontAndBack
     {
-        type            symmetry;
+        type            empty; 		//symmetry;
     }
 }
 

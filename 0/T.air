@@ -16,7 +16,7 @@ FoamFile
 
 dimensions          [0 0 0 1 0 0 0];
 
-internalField       uniform 300;
+internalField       uniform 350;
 
 boundaryField
 {
@@ -42,7 +42,7 @@ boundaryField
     }
     frontAndBack
     {
-        type            symmetry;
+        type            empty; 		// symmetry;
     }
 }
 
