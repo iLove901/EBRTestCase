@@ -27,7 +27,8 @@ solution
         rhom         cell;
         U.water           cellPoint;
         mu.water          cell;
-        alpha.water       cell;
+        alpha.air       cell;
+	alpha.water       cell;
     }
 
     integrationSchemes
@@ -51,7 +52,7 @@ constantProperties
     rhoMin          1e-15;
     minParcelMass   1e-15;
 
-    rho0            5526;
+    rho0            1526;
     youngsModulus   1e8;
     poissonsRatio   0.35;
 
@@ -88,7 +89,7 @@ subModels
                 fixedValueDistribution
                 {
 			// Particle diameter
-                    value   0.001;
+                    value   0.01;
                 }
             }
         }

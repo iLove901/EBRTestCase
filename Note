@@ -8,6 +8,11 @@
 
 /*----------------------------------------------------*/
 // This file is used for description
+Date: 190604
+Description:
+	1. Fixed boundary conditions
+	2. Change frontAndBack into empty (allowing 2D collidsion)
+
 Date: 190529
 Description:
 	1. Add many particles, but particles not moving

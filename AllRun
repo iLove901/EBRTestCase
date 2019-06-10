@@ -10,33 +10,62 @@ clear
 # Source run functions
 . $WM_PROJECT_DIR/bin/tools/RunFunctions
 
-# Create mesh
-blockMesh
+echo ">>> Start new simulation or continue old one?     y -> NEW    n -> OLD"
+read -t 60 ContinueOrNot
 
-# Running in serial in Default
+if [ "$ContinueOrNot" = "n" ]
+then
+	# Running in serial in Default
 
-echo ">>> Simulation in parallel?     y -> YES    n -> NO"
-read -t 3 SimMode
+	echo ">>> Simulation in parallel?     y -> YES    n -> NO"
+	read -t 60 SimMode
 
-
-# Serial run
-if [ "$SimMode" = "n" ]; then
-	# Run single core
-	$(getApplication)
-fi
-
-# Parallel run
-if [ "$SimMode" = "y" ]; then
-	# Decompose 8 domain
-	decomposePar
-	# Mpi run
-	mpirun -np $(getNumberOfProcessors) $(getApplication) -parallel
+	# Serial run
+	if [ "$SimMode" = "y" ]
+	then
+		# Decompose 8 domain
+		decomposePar
+		# Mpi run
+		mpirun -np $(getNumberOfProcessors) $(getApplication) -parallel
 	
-	echo
-	echo
+		echo
+		echo
 
-	# Reconstruct partition
-	reconstructPar
+		# Reconstruct partition
+		reconstructPar
+		
+	else
+		# Run single core
+		$(getApplication)
+	fi
+# New Run
+else
+	./AllClean
+	# Create mesh
+	blockMesh
+
+	# Running in serial in Default
+
+	echo ">>> Simulation in parallel?     y -> YES    n -> NO"
+	read -t 60 SimMode
+
+	# Serial run
+	if [ "$SimMode" = "y" ]
+	then
+		# Decompose 8 domain
+		decomposePar
+		# Mpi run
+		mpirun -np $(getNumberOfProcessors) $(getApplication) -parallel
+	
+		echo
+		echo
+
+		# Reconstruct partition
+		reconstructPar
+	else
+		# Run single core
+		$(getApplication)
+	fi
 fi
 
 
