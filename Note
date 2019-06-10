@@ -8,6 +8,13 @@
 
 /*----------------------------------------------------*/
 // This file is used for description
+Date: 190610
+Description:
+	1. Fixed problems
+	2. Revised twoPhaseSystem.C to bound theta() and alphasFluid
+	3. Calculation fails due to unrealistic alphas (too great or minus value)
+	4. Waiting to be further checked
+
 Date: 190604
 Description:
 	1. Fixed boundary conditions
