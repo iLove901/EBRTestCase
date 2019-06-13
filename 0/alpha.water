@@ -31,7 +31,7 @@ boundaryField
         type            inletOutlet;
         phi             phi.water;
         inletValue      uniform 0;
-        value           uniform 0.1;
+        value           uniform 0;
     }
     walls
     {
