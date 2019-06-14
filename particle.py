@@ -14,14 +14,17 @@ import os
 # Particle diameter
 diameter = 5e-3
 
+# Particle distance
+delta = 0.0005
+
 # Box dimension
 x = 0.15
 y = 0.50
 z = 0.01
 
 # Matrix dimension
-xArray = 100
-yArray = 5000
+xArray = 10
+yArray = 50
 zArray = 1
 #===========================End Input Section===============================#
 
@@ -44,7 +47,7 @@ with open('particlePositions', 'w') as file:
 		for j in range(0, yArray):
 			for k in range(0, zArray):
 				Count += 1
-				print('>>> AxiMeta: Current writing particle %d\r'%Count, end = '')
+				print('>>> AxiMeta: Current writing particle %d\r'%Count)
 				file.write('\n(' + str(xDistance*(i+1)) + '\t'+ str(yDistance*(j+1)) + '\t' + str(zDistance*(k+1)) + ')')
 	print('>>> AxiMeta: Done writing. Now exit...')
 	file.close()

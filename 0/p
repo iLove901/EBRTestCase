@@ -41,7 +41,8 @@ boundaryField
     }
     frontAndBack
     {
-        type            symmetry;
+        // type            symmetry;
+        type               empty;
     }
 }
 

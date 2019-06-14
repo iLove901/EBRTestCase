@@ -89,7 +89,7 @@ subModels
                 fixedValueDistribution
                 {
 			// Particle diameter
-                    value   0.01;
+                    value   0.001;
                 }
             }
         }

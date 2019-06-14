@@ -8,6 +8,12 @@
 
 /*----------------------------------------------------*/
 // This file is used for description
+Date: 190614
+Description:
+	1. Change to 2D collidsion.
+	2. 500 particles.
+	3. Revised twoPhaseSystem.C. Found that if particle diameter greater than cell, will cause minus alpha.
+
 Date: 190610
 Description:
 	1. Fixed problems
