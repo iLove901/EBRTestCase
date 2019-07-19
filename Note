@@ -8,6 +8,11 @@
 
 /*----------------------------------------------------*/
 // This file is used for description
+Date: 190719
+Description:
+	1. Change to 3D collidsion.
+	2. Change ErgunWenYuDrag to alphas.air, since alpha.water may be 0 and causing error.
+
 Date: 190614
 Description:
 	1. Change to 2D collidsion.
