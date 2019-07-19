@@ -18,13 +18,13 @@ diameter = 5e-3
 delta = 0.0005
 
 # Box dimension
-x = 0.15
-y = 0.50
-z = 0.01
+x = 0.1
+y = 0.5
+z = 0.004
 
 # Matrix dimension
-xArray = 10
-yArray = 50
+xArray = 80
+yArray = 500
 zArray = 1
 #===========================End Input Section===============================#
 
@@ -42,7 +42,7 @@ with open('particlePositions', 'w') as file:
 	yDistance = y/(yArray+1)
 	zDistance = z/(zArray+1)
 
-	Count = 1
+	Count = 0
 	for i in range(0, xArray):
 		for j in range(0, yArray):
 			for k in range(0, zArray):

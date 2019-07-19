@@ -52,7 +52,7 @@ constantProperties
     rhoMin          1e-15;
     minParcelMass   1e-15;
 
-    rho0            5526;
+    rho0            2500;
     youngsModulus   1e8;
     poissonsRatio   0.35;
 
@@ -67,7 +67,7 @@ subModels
     {
         ErgunWenYuDrag
         {
-            alphac alpha.water;
+            alphac alpha.air;
         }
         gravity;
     }
@@ -82,14 +82,14 @@ subModels
             nParticle       1;
             SOI             0;
             positionsFile   "kinematicCloudPositions";
-            U0              (0 0 0);
+            U0              (0 0.1 0);
             sizeDistribution
             {
                 type        fixedValue;
                 fixedValueDistribution
                 {
 			// Particle diameter
-                    value   0.001;
+                    value   0.002;
                 }
             }
         }
