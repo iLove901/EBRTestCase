@@ -24,11 +24,12 @@ solution
 
     interpolationSchemes
     {
-        rhom         cell;
-        U.water           cellPoint;
-        mu.water          cell;
+        rhom            cell;
+        U.water         cellPoint;
+        mu.water        cell;
         alpha.air       cell;
-	alpha.water       cell;
+	alpha.water     cell;
+	alpha.fluid 	cell;
     }
 
     integrationSchemes
@@ -67,7 +68,7 @@ subModels
     {
         ErgunWenYuDrag
         {
-            alphac alpha.air;
+            alphac alpha.fluid; 		//alpha.air;
         }
         gravity;
     }
@@ -82,14 +83,14 @@ subModels
             nParticle       1;
             SOI             0;
             positionsFile   "kinematicCloudPositions";
-            U0              (0 0.1 0);
+            U0              (0 0 0);
             sizeDistribution
             {
                 type        fixedValue;
                 fixedValueDistribution
                 {
 			// Particle diameter
-                    value   0.002;
+                    value   0.001;
                 }
             }
         }

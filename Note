@@ -8,6 +8,10 @@
 
 /*----------------------------------------------------*/
 // This file is used for description
+Date: 190903
+DescriptionL
+	1. Change solver to reactingEbullatingFoam7
+
 Date: 190719
 Description:
 	1. Change to 3D collidsion.
